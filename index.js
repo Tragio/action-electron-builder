@@ -150,7 +150,7 @@ function runAction() {
             ? 'npx --no-install'
             : useYarn
             ? 'yarn run'
-            : 'pnpm run'
+            : 'pnpm'
         } ${cmd} --${platform} ${release ? '--publish always' : ''} ${
           platform == 'mac' ? '--arm64 --x64' : ''
         }	${args}`,
