@@ -1,2 +1,2 @@
 # Electron Builder Action
-## This action makes use of Node18 and PNPM. Fork and use it yourself.
+### This action makes use of PNPM. Feel free to fork it and use it.
