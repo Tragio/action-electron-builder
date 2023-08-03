@@ -118,7 +118,7 @@ function runAction() {
       useNpm ? 'NPM' : useYarn ? 'Yarn' : 'PNPM'
     }…`,
   )
-  run(useNpm ? 'npm install' : useYarn ? 'yarn' : 'pnpm install', pkgRoot)
+  run(useNpm ? 'npm install' : useYarn ? 'yarn' : 'pnpm install --frozen-lockfile', pkgRoot)
 
   // Run NPM build script if it exists
   if (skipBuild) {
@@ -150,7 +150,7 @@ function runAction() {
             ? 'npx --no-install'
             : useYarn
             ? 'yarn run'
-            : 'pnpx --no-install'
+            : 'pnpm run'
         } ${cmd} --${platform} ${release ? '--publish always' : ''} ${
           platform == 'mac' ? '--arm64 --x64' : ''
         }	${args}`,
